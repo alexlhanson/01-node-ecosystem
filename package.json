@@ -4,7 +4,7 @@
   "description": "Create hello world for TDD lab",
   "main": "index.js",
   "scripts": {
-    "test": "jest **/*test.js",
+    "test": "jest **/*.test.js",
     "lint": "eslint **/.js"
   },
   "repository": {

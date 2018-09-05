@@ -2,17 +2,16 @@
 
 const greet = require('../lib/greet.js');
 
-test('This should return a message Hello World', () => {
+test('should return a message Hello World', () => {
   let actual = greet.hello('World'),
     expectedValue = 'Hello World';
   expect(actual).toBe(expectedValue);
 })
 
-test('This should return null if wrong parameter type is passed in', () =>{
+test('should return null if wrong parameter type is passed in', () =>{
   expect(greet.hello(1)).toBeNull();
   expect(greet.hello(true)).toBeNull();
   expect(greet.hello()).toBeNull();
   expect(greet.hello([])).toBeNull();
   expect(greet.hello({})).toBeNull();
 })
-
