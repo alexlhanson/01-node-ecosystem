@@ -8,7 +8,6 @@ test('should return addition of two numbers', () => {
   expect(actual).toBe(expectedValue);
 })
 
-
 test('should return subtraction of two numbers', () => {
   let actual = arithmetic.sub(1, 2), 
     expectedValue = 1;
@@ -16,11 +15,15 @@ test('should return subtraction of two numbers', () => {
 })
 
 test('add should return null if parameters are not a number', () => {
-  expect(arithmetic.add(NaN, 4)).toBeNull();
-  expect(arithmetic.add(4, NaN)).toBeNull();
+  expect(arithmetic.add(4, true)).toBeNull();
+  expect(arithmetic.add(4, 'true')).toBeNull();
+  expect(arithmetic.add(4, {})).toBeNull();
+  expect(arithmetic.add(4, [])).toBeNull();
 })
 
 test('sub should return null if parameters are not a number', () => {
-  expect(arithmetic.sub(NaN, 4)).toBeNull();
-  expect(arithmetic.sub(4, NaN)).toBeNull();
+  expect(arithmetic.sub(4, true)).toBeNull();
+  expect(arithmetic.sub(4, 'true')).toBeNull();  
+  expect(arithmetic.sub(4, {})).toBeNull();
+  expect(arithmetic.sub(4, [])).toBeNull();
 })
