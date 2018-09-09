@@ -11,7 +11,7 @@ exports.sub = (num1, num2) => {
   if (_isValidNum(num1, num2) === false) {
     return null;
   } else {
-    return num2 - num1;
+    return num1 - num2;
   } 
 };
 
